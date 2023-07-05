@@ -10,6 +10,7 @@ def speech_to_text():
         audio = r.listen(source)
 
     try:
+        st.write(type(audio))
         text = r.recognize_google(audio)
         st.write("You said:", text)
     except sr.UnknownValueError:
